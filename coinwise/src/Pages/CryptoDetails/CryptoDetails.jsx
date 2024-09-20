@@ -28,7 +28,7 @@ const CryptoDetails = () => {
   }, [coinId, timePeriod, fetchCryptoHistory])
   
   return (
-    <div className='min-h-[96.5vh]'>
+    <div className='min-h-[96.5vh] container'>
       {cryptoDetails && (
           <div className='text-sm'>
             <div className='flex items-center justify-center gap-2 mb-6'>

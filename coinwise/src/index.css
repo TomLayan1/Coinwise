@@ -2,9 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.page-bx{
-  @apply overflow-y-scroll;
-}
-.page-bx::-webkit-scrollbar {
-  display: none;
+
+@layer utilities {
+  .page-bx {
+    overflow-y: scroll;
+  }
+  
+  .page-bx::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .page-bx::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
+  
+  .page-bx::-webkit-scrollbar-thumb {
+    background-color: #00001a;
+  }
 }
