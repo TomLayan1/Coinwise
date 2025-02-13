@@ -14,8 +14,9 @@ module.exports = {
       container: {
         center: true,
         padding: {
-          DEFAULT: '2rem',
-          sm:'3rem'
+          DEFAULT: '1rem',
+          md: '2rem',
+          sm: '3rem'
         }
       },
       boxShadow: {

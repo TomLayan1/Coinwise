@@ -25,7 +25,7 @@ const App = () => {
                 <Navbar showMenu={showMenu} setShowMenu={setShowMenu} menu={menu} setMenu={setMenu} />
               </div>
               <div className='page-bx w-full bg-gray-100'>
-                <div className='w-full pt-16 pb-7 px-8'>
+                <div className='w-full pt-16 pb-7'>
                   <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/home' element={<Home setMenu={setMenu} />} />
