@@ -27,8 +27,8 @@ const App = () => {
               <div className='page-bx w-full bg-gray-100'>
                 <div className='w-full pt-16 pb-7'>
                   <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/home' element={<Home setMenu={setMenu} />} />
+                    {/* <Route path='/' element={<Home />} /> */}
+                    <Route path='/' element={<Home setMenu={setMenu} />} />
                     <Route path='/cryptocurrencies' element={<Cryptocurrencies />} />
                     <Route path='/crypto/:coinId' element={<CryptoDetails />} />
                   </Routes>

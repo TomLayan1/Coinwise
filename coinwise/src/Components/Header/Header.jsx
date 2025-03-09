@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaBars } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
-const Header = ({showMenu, setShowMenu}) => {
+const Header = ({ showMenu, setShowMenu, handleNav }) => {
   return (
     <>
       {showMenu && <div onClick={() => setShowMenu(false)} className='fixed top-0 left-0 w-full h-[100vh] bg-grayBg z-20'></div>}
@@ -9,9 +10,11 @@ const Header = ({showMenu, setShowMenu}) => {
         <div onClick={() => setShowMenu(!showMenu)} className='w-[7%] md:hidden'>
           <FaBars className='hamburger-x' size={22} style = {{cursor: 'pointer', color: 'white' }}/>
         </div>
-        <div className='w-[87%] md:w-[187px]'>
-          <h2 className='text-primaryColor font-bold tracking-widest text-xl text-center md:text-left md:ml-3'>COIN<span className='text-white'>WISE</span></h2>
-        </div>
+        <Link to={'/'} onClick={() => handleNav('Home')}>
+          <div className='w-[87%] md:w-[187px]'>
+            <h2 className='text-primaryColor font-bold tracking-widest text-xl text-center md:text-left md:ml-3'>COIN<span className='text-white'>WISE</span></h2>
+          </div>
+        </Link>
       </header>
     </>
   )

@@ -1,6 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaTimes } from 'react-icons/fa'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
+import Header from '../Header/Header';
 
 const Navbar = ({menu, setMenu, showMenu, setShowMenu}) => {
 
@@ -8,7 +9,7 @@ const Navbar = ({menu, setMenu, showMenu, setShowMenu}) => {
     {
       name: 'Home',
       icons: <i class='bx bx-home-alt mr-4'></i>,
-      path: '/home'
+      path: '/'
     },
     {
       name: 'Cryptocurrencies',
@@ -21,6 +22,10 @@ const Navbar = ({menu, setMenu, showMenu, setShowMenu}) => {
     const selectedNav = navigation.find(nav => (nav.name === name))
     setMenu(selectedNav.name)
     setShowMenu(false)
+  }
+
+  if (handleNav) {
+    <Header handleNav={handleNav}  />
   }
 
   return (
